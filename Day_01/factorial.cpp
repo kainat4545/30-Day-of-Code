@@ -12,6 +12,7 @@ int main()
         fact=fact*i;
     }
     cout<<"factorial:"<<fact;
+ cout<<"hello "<<endl;
 
     return 0;
 }  
