@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/30-Days-of-code/Day_01",
-      "program": "d:/30-Days-of-code/Day_01/build/Debug/outDebug",
+      "cwd": "d:/30-Days-of-code/Day_03",
+      "program": "d:/30-Days-of-code/Day_03/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
