@@ -1,54 +1,66 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
- 
-    void choice(){
-    int choice;
-    cout << "1. monday" << endl;
-    cout << "2. tuesday" << endl;
-    cout << "3. wednesday" << endl;
-    cout << "4. thursday" << endl;
-    cout << "5.friday"  <<endl;
-    cout << " 6. saturday" <<endl;
-    cout<< "7. sunday" << endl;
 
-    cout << "Enter your choice: ";
-    cin>>choice;
+void choice()
+{
+    bool run = true;
 
-    switch (choice)
+    while (run)
     {
-    case 1:
-        cout << "monday"<<endl;
-        break;
+        int choice;
+        cout << "Enter your choice between 1 and 7 or enter -1 to exit  : ";
+        cin >> choice;
 
-    case 2:
-        cout << "tuesday " << endl;
-        break;
+        if (choice == -1)
+        {
+            run = false;
+        }
 
-    case 3:
-        cout << "wednesday " << endl;
-        break;
+        if (choice >= 1 && choice <= 7)
+        {
+            cout << "valid choice" << endl;
+        }
+        else
+        {
+            cout << "invalid choice" << endl;
+        }
 
-    case 4:
-        cout << "thursday "<< endl;
-        break;
+        switch (choice)
+        {
+        case 1:
+            cout << "monday" << endl;
+            break;
 
-    case 5:
-        cout << "friday" << endl;
-        break;
-    case 6:
-        cout<<"saturday"<<endl;
-        break;
-    case 7:
-    cout<<"sunday"<<endl;
-    break;
-    default:
-    cout<<"invalid choice"<<endl;
+        case 2:
+            cout << "tuesday " << endl;
+            break;
+
+        case 3:
+            cout << "wednesday " << endl;
+            break;
+
+        case 4:
+            cout << "thursday " << endl;
+            break;
+
+        case 5:
+            cout << "friday" << endl;
+            break;
+        case 6:
+            cout << "saturday" << endl;
+            break;
+        case 7:
+            cout << "sunday" << endl;
+            break;
+        default:
+            cout << "invalid choice" << endl;
+        }
     }
-    
 }
-    int main(){
-     choice();
-        return 0;
 
+int main()
+{
 
-    }
+    choice();
+    return 0;
+}
