@@ -4,9 +4,9 @@ using namespace std;
 int main()
 {
     int x = 10;
-    int *ptr = &x;
-    cout << ptr << endl;
-    cout << *ptr << endl;
-    
+    int *ptr1 = &x;
+    cout << ptr1 << endl;
+    cout << *ptr1 << endl;
+
     return 0;
 }
