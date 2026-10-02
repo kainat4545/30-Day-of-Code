@@ -1,33 +1,31 @@
 #include <iostream>
 using namespace std;
-
 int main()
 {
-    int row;
-    cout << "Enter number of rows: ";
-    cin >> row;
-    int **arr = new int*[row];
-    for (int i = 0; i < row; i++)
+   int rows;
+         cout << "Please enter how rows: ";
+         cin >> rows;
+     int **arr = new int*[rows];
+       for (int i = 0; i < rows; i++)
     {
-        int columns;
-        cout << "Enter number of columns for row " << i << ": ";
-        cin >> columns;
-
-        arr[i] = new int[columns];
-        for (int j = 0; j < columns; j++)
+   int cols;
+          cout << "How many columns for row " << i << ": ";
+          cin >> cols;
+    arr[i] = new int[cols];
+        for (int j = 0; j < cols; j++)
+   {
+     arr[i][j] = i * 10;
+       }
+    }
+         cout << "\nHere is your jagged 2D array:" << endl;
+          for (int i = 0; i < rows; i++)
         {
-            arr[i][j] = i * 10 + j;
+           cout << "Row " << i << ": ";
+    }
+         for (int i = 0; i < rows; i++)
+       {
+      delete[] arr[i];
         }
-    }
-    cout << "\nJagged 2D Array:" << endl;
-    for (int i = 0; i < row; i++)
-    {
-        cout << "Row " << i << ": ";
-    }
-    for (int i = 0; i < row; i++)
-    {
-        delete[] arr[i];
-    }
-    delete[] arr;
+         delete[] arr;
     return 0;
 }
